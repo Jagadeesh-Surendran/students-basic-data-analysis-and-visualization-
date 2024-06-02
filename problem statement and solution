@@ -1,0 +1,40 @@
+Problem Statement:
+
+You have a dataset containing information about students, including their names, ages, and 
+grades in a particular course. 
+Your task is to perform some basic data analysis and visualization on this dataset.
+
+SOLUTION CODE:
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataset
+students = pd.DataFrame({
+    'Name': ['John', 'Alice', 'Bob', 'Sarah', 'Mike', 'Emily', 'David', 'Jessica', 'Tom', 'Lily'],
+    'Age': [18, 20, 19, 21, 22, 19, 20, 18, 21, 20],
+    'Grade': [85, 92, 78, 88, 75, 90, 82, 95, 70, 86]
+})
+
+# Print the first few rows of the dataset
+print(students.head())
+
+# Calculate summary statistics
+print("\nSummary Statistics:")
+print(students.describe())
+
+# Scatter plot: Age vs. Grade
+plt.scatter(students['Age'], students['Grade'])
+plt.title('Age vs. Grade')
+plt.xlabel('Age')
+plt.ylabel('Grade')
+plt.show()
+
+# Bar plot: Grade distribution
+plt.bar(students['Name'], students['Grade'])
+plt.title('Grade Distribution')
+plt.xlabel('Student')
+plt.ylabel('Grade')
+plt.xticks(rotation=90)
+plt.show()
+
