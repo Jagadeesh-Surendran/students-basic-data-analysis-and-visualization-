@@ -1,0 +1,7 @@
+DataSet: 
+
+students = pd.DataFrame({
+    'Name': ['John', 'Alice', 'Bob', 'Sarah', 'Mike', 'Emily', 'David', 'Jessica', 'Tom', 'Lily'],
+    'Age': [18, 20, 19, 21, 22, 19, 20, 18, 21, 20],
+    'Grade': [85, 92, 78, 88, 75, 90, 82, 95, 70, 86]
+})
